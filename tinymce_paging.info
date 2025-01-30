@@ -1,0 +1,6 @@
+type = module
+name = TinyMCE Paging
+description = TinyMCE plugin and button to insert page break markup to split nodes into multiple pages.
+backdrop = 1.x
+
+dependencies[] = paging

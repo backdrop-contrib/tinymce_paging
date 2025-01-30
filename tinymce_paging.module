@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * TinyMCE plugin that provides an editor button for Paging.
+ */
+
+/**
+ * Implements hook_tinymce_external_plugins().
+ */
+function tinymce_paging_tinymce_external_plugins($format) {
+  // This is actually a plugin that ships with TinyMCE by default, but it's not
+  // exposed in the main module.
+  $tiny_path = backdrop_get_path('module', 'tinymce');
+  $plugins = array(
+    'pagebreak' => array(
+      'plugin_path' => base_path() . $tiny_path . '/libraries/tinymce/js/tinymce/plugins/pagebreak/plugin.min.js',
+      'buttons' => array(
+        'pagebreak' => array(
+          'icon' => 'page-break',
+          'tootip' => t('Page break'),
+        ),
+      ),
+    ),
+  );
+  return $plugins;
+}
+
+/**
+ * Implements hook_tinymce_options_alter().
+ */
+function tinymce_paging_tinymce_options_alter(array &$options, $format) {
+  // Inject the "Page separator string" setting from
+  // admin/config/content/paging into editor options.
+  $options['tiny_options']['pagebreak_separator'] = config_get('paging.settings', 'separator');
+}
