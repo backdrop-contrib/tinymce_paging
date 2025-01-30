@@ -4,3 +4,4 @@ description = TinyMCE plugin and button to insert page break markup to split nod
 backdrop = 1.x
 
 dependencies[] = paging
+dependencies[] = tinymce
