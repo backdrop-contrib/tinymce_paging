@@ -21,6 +21,8 @@ plugin just provides a convenient button to insert the markup.
 
 Bugs and feature requests should be reported in the [Issue Queue](https://github.com/backdrop-contrib/tinymce_paging/issues)
 
+## Current Maintainers
+
 - [Indigoxela](https://github.com/indigoxela)
 
 ## License
