@@ -16,6 +16,7 @@ plugin just provides a convenient button to insert the markup.
 ## Dependencies
 
 - Paging
+- TinyMCE
 
 ## Issues
 
