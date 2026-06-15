@@ -32,4 +32,5 @@ function tinymce_paging_tinymce_options_alter(array &$options, $format) {
   // Inject the "Page separator string" setting from
   // admin/config/content/paging into editor options.
   $options['tiny_options']['pagebreak_separator'] = config_get('paging.settings', 'separator');
+  $options['tiny_options']['pagebreak_split_block'] = TRUE;
 }
